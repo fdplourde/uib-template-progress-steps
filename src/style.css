@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-unfill: #e0e0e0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+body {
+    background-color: #f6f7fb;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+}
+
+.container {
+    text-align: center;
+    flex-direction: row;
+
+
+   
+
+    
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+
+}
+
+
+.progress-container::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--line-border-unfill);
+    border-radius: 10px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 0;
+    transform:  translateY(-50%);
+    z-index: -1;
+   
+
+
+}
+
+.progress {
+    width: 0%;
+    height: 4px;
+    background-color:var(--line-border-fill);
+    border-radius: 10px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 0;
+    transform:  translateY(-50%);
+    z-index: -1;
+    transition: 0.4 ease;
+
+
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-unfill);
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    background-color: white;
+    border: 3px solid var(--line-border-fill);
+    
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+
+}
+
+
+
+.btn {
+    background-color: var(--line-border-fill);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+
+.buttondiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: center;
+    width: 75%;
+    max-width: 350px;
+}

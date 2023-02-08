@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   -->
+    <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / - socket.io no longer needed  -->
+        <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+        <script defer src="./index.js">/* OPTIONAL: Put your custom code in that */</script>
+        <!-- #endregion -->
+
+    <title>Progress Steps</title>
+</head>
+<body>
+    <div class="conatainer">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+        <div onchange="fnSendToNR('1')" class="circle active">1</div>
+        <div onchange="uibuilder.eventSend(event)" data-type="eventSend" data-foo="Bah" class="circle">2</div>
+        <div onchange="uibuilder.eventSend(event)" data-type="eventSend" data-foo="Bah" class="circle">3</div> 
+        <div onchange="uibuilder.eventSend(event)" data-type="eventSend" data-foo="Bah" class="circle">4</div>
+        </div>
+
+        <div class="buttondiv">
+        <button onclick="fnSendToNR('prev')" class="button btn" id="prev" disabled>Prev</button>
+        <button onclick="fnSendToNR('next')" class="button btn" id="next">Next</button>
+        </div>
+    </div>
+
+
+    
+
+    
+
+</body>
+     </html>     
